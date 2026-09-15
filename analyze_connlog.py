@@ -32,6 +32,8 @@ def main() -> None:
         rare.columns = ["service", "share"]
     rare.to_csv(OUT / "rare_services.csv", index=False)
 
+    # p99 is blunt but fine for a first hunting pass
+    # p99 is blunt but fine for a first pass before density-based methods
     dur_p99 = df["duration"].quantile(0.99)
     bytes_p99 = df["orig_bytes"].quantile(0.99)
     anom = df[(df["duration"] >= dur_p99) | (df["orig_bytes"] >= bytes_p99)].copy()
