@@ -1,0 +1,15 @@
+{
+  "n_conns": 1200,
+  "unique_orig": 236,
+  "unique_resp": 49,
+  "duration_p99": 786.534,
+  "orig_bytes_p99": 6663436,
+  "anomalous_count": 13,
+  "top_services": {
+    "ssl": 345,
+    "http": 297,
+    "dns": 231,
+    "-": 142,
+    "ssh": 121
+  }
+}
